@@ -132,7 +132,7 @@ body.dark-mode .logo:hover{
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 body.dark-mode .header {
@@ -152,7 +152,7 @@ body.dark-mode .navbar a.active {
 
 #menu-icon {
     font-size: 3.6rem;
-    color: var(--main-color-dark);
+    color: var(--bg-color);
     cursor: pointer;
     display: none;
     margin-left: 1rem;
@@ -510,12 +510,16 @@ body.dark-mode .inner{
 .portfolio-layer {
     padding: 1rem;
     text-align: left;
-    background: rgba(12, 17, 29,0.9);
+    background: rgba(213, 253, 249, 0.9);
     position: absolute;
     bottom: 0;
     width: 100%;
     box-sizing: border-box;
     transition: background 0.3s ease;
+}
+
+body.dark-mode .portfolio-layer{
+    background: rgba(12, 17, 29,0.9);
 }
 
 .portfolio-layer h4 {
@@ -545,6 +549,10 @@ body.dark-mode .inner{
 }
 
 .portfolio-box:hover .portfolio-layer {
+    background:rgba(213, 253, 249, 0.9)
+}
+
+body.dark-mode .portfolio-box:hover .portfolio-layer {
     background:rgba(12, 17, 29,1);
 }
 
@@ -647,7 +655,7 @@ body.dark-mode .inner{
 /* Media Queries for responsive design */
 
 
-@media (min-width: 787px) and (max-width: 1012px) {
+@media (min-width: 787px) and (max-width: 1050px) {
     #menu-icon {
         display: inline-block;
     }
@@ -659,9 +667,13 @@ body.dark-mode .inner{
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        background: rgba(12, 17, 29,0.8);
+        background: rgba(104, 151, 143,0.8);
         transition: all 0.5s ease;
         backdrop-filter: blur(10px);
+    }
+
+    body.dark .navbar{
+        background-color:rgba(12, 17, 29,0.8); ;
     }
 
     .navbar a {
@@ -752,11 +764,13 @@ body.dark-mode .inner{
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        background: rgba(12, 17, 29,0.8);
+        background: rgba(104, 151, 143,0.8);
         transition: all 0.5s ease;
         backdrop-filter: blur(10px);
     }
-
+    body.dark .navbar{
+        background-color:rgba(12, 17, 29,0.8); ;
+    }
     .navbar a {
         display: block;
         padding: 17px;
